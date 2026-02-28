@@ -36,18 +36,16 @@ function App() {
           </h1>
 
           <p style={{ fontSize: "24px", marginTop: "20px" }}>
-            Full Stack Developer building clean web and mobile systems.
+            Full Stack & Mobile Developer building clean web and mobile systems.
           </p>
         </div>
 
         <div style={card}>
           <h3>Tech Focus</h3>
           <p style={{ lineHeight: "1.8" }}>
-            React • .NET • Node.js • APIs
+            React • Blazor • .NET MAUI • Node.js • APIs
             <br />
-            Automation Systems
-            <br />
-            Mobile Development
+            Automation Systems • Mobile Development
           </p>
         </div>
       </section>
@@ -64,23 +62,48 @@ function App() {
           }}
         >
           <div style={card}>
-            <h3>Automated Task Delegation</h3>
-            <p>AI-based task assignment using workload and skill logic.</p>
+            <h3>Automated Task Delegation & Management System (Capstone)</h3>
+            <p>
+              Developed an AI-powered task management system with automated task
+              allocation based on workload, task difficulty, and user skills.
+              Implemented skill-based profiling and fairness algorithms to improve
+              distribution efficiency.
+            </p>
           </div>
 
           <div style={card}>
-            <h3>Commission & Wallet System</h3>
-            <p>QR payment tracking with automated wallet sync.</p>
+            <h3>Mobile App with GPS Tracking</h3>
+            <p>
+              Built and published a mobile application featuring OTP login,
+              commission tracking, wallet monitoring, and activity modules.
+              Implemented background GPS tracking with movement-based logging and
+              real-time API synchronization.
+            </p>
+          </div>
+
+          <div style={card}>
+            <h3>Agent Commission Collection & Wallet Management System</h3>
+            <p>
+              Developed a commission collection and reconciliation system with QR
+              payment integration and accounting workflows. Implemented automated
+              wallet crediting, transaction history, and web-mobile synchronization.
+            </p>
           </div>
 
           <div style={card}>
             <h3>Automated Payroll System</h3>
-            <p>Automated payout and deduction workflows.</p>
+            <p>
+              Created a web-based payroll system automating commission calculations,
+              deductions, and payout tracking with accounting comments.
+            </p>
           </div>
 
           <div style={card}>
-            <h3>Mobile GPS Tracking App</h3>
-            <p>OTP login, GPS tracking, and real-time API sync.</p>
+            <h3>Stock Broker System</h3>
+            <p>
+              Developed Blazor-based stock trading pages with board lot validation
+              and transaction form handling.
+            </p>
           </div>
         </div>
       </section>
@@ -88,10 +111,62 @@ function App() {
       {/* EXPERIENCE */}
       <section style={{ marginBottom: "80px" }}>
         <h2 style={{ fontSize: "34px" }}>Experience</h2>
+
         <p>
-          <strong>Full Stack & Mobile Developer</strong> — Infotouch System Inc
+          <strong>Full Stack & Mobile Developer — Infotouch System Inc</strong>
+          <br />
+          July 2025 – February 2026
         </p>
-        <p>Built automation systems, APIs, and mobile applications.</p>
+        <p>
+          Developed and maintained web and mobile applications using .NET MAUI,
+          Blazor, MySQL, MongoDB, and API integrations. Implemented automation
+          features including commission tracking, wallet management, and payroll
+          workflows. Built real-time data synchronization and background services.
+        </p>
+
+        <br />
+
+        <p>
+          <strong>OJT / Internship — Full Stack Developer</strong>
+          <br />
+          February 2025 – April 2025
+        </p>
+        <p>
+          Assisted in developing web features using Blazor and .NET technologies.
+          Supported API integration and database-related tasks involving MySQL
+          and MongoDB.
+        </p>
+      </section>
+
+      {/* TECH STACK */}
+      <section style={{ marginBottom: "80px" }}>
+        <h2 style={{ fontSize: "34px" }}>Tech Stack</h2>
+        <p>
+          Java • JavaScript • Python • C++ • C# • HTML • Tailwind CSS
+        </p>
+        <p>
+          React • Blazor • Bootstrap • .NET MAUI • Node.js / Express
+        </p>
+        <p>
+          MySQL • MongoDB • Dapper • Supabase
+        </p>
+        <p>
+          Git • GitHub • Azure DevOps • Postman • Insomnia
+        </p>
+        <p>
+          JWT Authentication • OTP Login • CRUD APIs • Token Validation
+        </p>
+      </section>
+
+      {/* EDUCATION */}
+      <section style={{ marginBottom: "80px" }}>
+        <h2 style={{ fontSize: "34px" }}>Education</h2>
+        <p>
+          BS Computer Science — Centro Escolar University (2025)
+        </p>
+        <p>
+          Accountancy and Business Management — Centro Escolar University (2021)
+        </p>
       </section>
 
       {/* CONTACT */}
