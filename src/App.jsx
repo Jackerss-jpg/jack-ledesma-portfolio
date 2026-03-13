@@ -71,7 +71,7 @@ function Home() {
               letterSpacing: "-3px",
             }}
           >
-            Jack Edwin
+            Jack Edwin A.
             <br />
             Ledesma
           </h1>
@@ -91,28 +91,48 @@ function Home() {
         </div>
       </section>
 
-      {/* EXPERIENCE */}
-      <section style={{ marginBottom: "80px" }}>
-        <h2 style={{ fontSize: "34px" }}>Experience</h2>
+    {/* EXPERIENCE */}
+<section style={{ marginBottom: "80px" }}>
+  <h2 style={{ fontSize: "34px" }}>Experience</h2>
 
-        <p>
-          <strong>Full Stack & Mobile Developer — Infotouch System Inc</strong>
-          <br />
-          July 2025 – February 2026
-        </p>
+  <p>
+    <strong>Full Stack & Mobile Developer — Infotouch System Inc</strong>
+    <br />
+    July 2025 – February 2026
+  </p>
 
-        <p>
-          Developed and maintained web and mobile applications using .NET MAUI,
-          Blazor, MySQL, MongoDB, and API integrations.
-        </p>
-      </section>
+  <p>
+    Developed and maintained web and mobile applications using .NET MAUI,
+    Blazor, MySQL, MongoDB, and API integrations.
+  </p>
+
+  <p>
+    <strong>OJT / Internship — Full Stack Developer — Infotouch System Inc</strong>
+    <br />
+    February 2025 – April 2025 (300 hours)
+  </p>
+
+  <p>
+    • Assisted in developing web application features using Blazor and .NET technologies.
+    <br />
+    • Supported API integration and database-related tasks involving MySQL and MongoDB.
+  </p>
+</section>
+
+    
 
       {/* TECH STACK */}
       <section style={{ marginBottom: "80px" }}>
         <h2 style={{ fontSize: "34px" }}>Tech Stack</h2>
-        <p>React • Blazor • .NET MAUI • Node.js</p>
-        <p>MySQL • MongoDB • Supabase</p>
-        <p>JWT Auth • APIs • Automation Systems</p>
+        <p>
+Programming Languages: Java, JavaScript, Python, C++, C#, HTML, Tailwind CSS </p>
+ <p>Frameworks & Development: Blazor, React, Bootstrap, .NET MAUI </p>
+<p>Backend Development: Minimal API (.NET), Node.js / Express </p>
+<p>Database Technologies: MySQL, MongoDB, Dapper, Supabase </p>
+<p>Version Control & Tools: Git, GitHub, Azure DevOps, Postman, Insomnia </p>
+<p>API & Security: CRUD Operations, Request Validation, JWT Authentication, OTP Login, Token Validation & Refresh 
+Tokens </p>
+<p>Methodologies: Agile, Waterfall</p>
       </section>
 
       {/* CONTACT */}
@@ -129,7 +149,15 @@ function Home() {
 function Projects() {
   return (
     <section>
-      <h2 style={{ fontSize: "42px", marginBottom: "50px" }}>Projects</h2>
+      <h2 style={{ fontSize: "42px", marginBottom: "30px" }}>Projects</h2>
+
+      {/* NDA NOTICE */}
+      <p style={{ marginBottom: "50px", lineHeight: "1.7", fontStyle: "italic" }}>
+        Note: Due to NDA agreements with my previous company, specific client
+        names, agent identities, and sensitive operational details cannot be
+        displayed. The following examples demonstrate the systems and features I
+        developed without exposing confidential data.
+      </p>
 
       {/* THESIS */}
       <div style={{ ...card, marginBottom: "70px" }}>
@@ -149,10 +177,16 @@ function Projects() {
 
         <p style={{ marginTop: "20px", lineHeight: "1.7" }}>
           Designed and developed an AI-assisted task delegation system that
-          automatically distributes tasks based on workload, team member
-          skillsets, and task difficulty. The system helps project managers
-          reduce manual planning while improving team productivity and task
-          balance.
+          automatically assigns tasks based on workload distribution, team
+          member skillsets, and task complexity. The system analyzes available
+          personnel and dynamically balances assignments to improve productivity
+          and reduce manual project planning.
+        </p>
+
+        <p style={{ marginTop: "15px", lineHeight: "1.7" }}>
+          <strong>Technologies Used:</strong> Python (AI model training), Task
+          prioritization logic, workload scoring algorithm, Node.js backend,
+          MongoDB database, REST API integration.
         </p>
       </div>
 
@@ -164,38 +198,66 @@ function Projects() {
       <div style={projectGrid}>
         <div style={cardLarge}>
           <img src={fundreview} style={imgLarge} alt="Fund Review System" />
+
           <p>
-            Developed the **fund review dashboard** used by administrators to
-            validate and review collected payments from field agents. This
-            interface ensures that reported collections match the system
-            records before approval.
+            Developed a <strong>Fund Review Dashboard</strong> used by
+            administrators to validate and audit collection reports submitted by
+            field agents. Implemented validation logic that cross-checks
+            submitted collection data against recorded transactions in the
+            database before approval.
+          </p>
+
+          <p>
+            <strong>Technologies:</strong> Blazor, ASP.NET Core API, MySQL,
+            Dapper ORM, SQL validation queries.
           </p>
         </div>
 
         <div style={cardLarge}>
           <img src={payout} style={imgLarge} alt="Payout System" />
+
           <p>
-            Built the **commission payout interface** allowing administrators to
-            process and release earnings to agents. Implemented payout tracking
-            and validation to prevent incorrect payments.
+            Built a <strong>Commission Payout Management Interface</strong> that
+            allows administrators to process agent commissions. Implemented
+            payout verification logic, transaction tracking, and safeguards to
+            prevent duplicate or incorrect payout transactions.
+          </p>
+
+          <p>
+            <strong>Technologies:</strong> Blazor, REST APIs, MySQL, Dapper,
+            transaction validation logic.
           </p>
         </div>
 
         <div style={cardLarge}>
           <img src={recon} style={imgLarge} alt="Reconciliation System" />
+
           <p>
-            Created a **transaction reconciliation dashboard** that compares
-            multiple financial records to detect inconsistencies and missing
-            entries, improving financial accuracy and transparency.
+            Created a <strong>Financial Reconciliation Dashboard</strong> that
+            compares multiple transaction sources to detect discrepancies and
+            missing entries. Implemented reconciliation algorithms using SQL
+            joins and transaction matching logic.
+          </p>
+
+          <p>
+            <strong>Technologies:</strong> MySQL, SQL joins, discrepancy
+            detection logic, Blazor dashboards.
           </p>
         </div>
 
         <div style={cardLarge}>
           <img src={wallet} style={imgLarge} alt="Wallet System" />
+
           <p>
-            Implemented the **wallet management page** where administrators can
-            monitor agent balances, transaction history, and payment activity
-            across the system.
+            Implemented a <strong>Wallet Management System</strong> allowing
+            administrators to monitor agent balances, transaction history, and
+            wallet activity. Developed ledger-based calculations to maintain
+            accurate balance updates and transaction auditing.
+          </p>
+
+          <p>
+            <strong>Technologies:</strong> ASP.NET API, MySQL ledger tables,
+            Dapper ORM, financial transaction tracking.
           </p>
         </div>
       </div>
@@ -208,28 +270,46 @@ function Projects() {
       <div style={projectGrid}>
         <div style={cardLarge}>
           <img src={conslemobile} style={imgLarge} alt="Mobile Console" />
+
           <p>
-            Developed the **mobile console for field agents** to collect
-            payments, monitor commission earnings, and submit transaction
-            records directly from their mobile devices.
+            Developed a <strong>Mobile Console for Field Agents</strong> enabling
+            real-time payment collection, transaction submission, and commission
+            tracking directly from mobile devices.
+          </p>
+
+          <p>
+            <strong>Technologies:</strong> .NET MAUI, REST API integration,
+            MySQL backend services.
           </p>
         </div>
 
         <div style={cardLarge}>
           <img src={walletmobile} style={imgLarge} alt="Mobile Wallet" />
+
           <p>
-            Built the **mobile wallet interface** where agents can track their
-            earnings, view payout history, and monitor real-time commission
-            balances.
+            Built a <strong>Mobile Wallet Interface</strong> allowing agents to
+            monitor commission balances, payout records, and financial activity
+            in real time.
+          </p>
+
+          <p>
+            <strong>Technologies:</strong> .NET MAUI, API-based wallet services,
+            transaction history queries.
           </p>
         </div>
 
         <div style={cardLarge}>
           <img src={accountmobile} style={imgLarge} alt="Mobile Account" />
+
           <p>
-            Created the **account management screen** allowing agents to manage
-            their personal information, security settings, and profile details
-            directly within the mobile application.
+            Created an <strong>Account Management Module</strong> where agents
+            can update personal information, manage security settings, and edit
+            profile details directly from the mobile application.
+          </p>
+
+          <p>
+            <strong>Technologies:</strong> .NET MAUI, API authentication,
+            secure profile update endpoints.
           </p>
         </div>
       </div>
