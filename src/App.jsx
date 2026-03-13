@@ -1,4 +1,15 @@
+import { useState } from "react";
+import conslemobile from "./assets/consolemobile.png";
+import fundreview from "./assets/fundreview.png";
+import payout from "./assets/payout.png";
+import recon from "./assets/recon.png";
+import wallet from "./assets/wallet3.png";
+import walletmobile from "./assets/walletmobile.png";
+import accountmobile from "./assets/accountmobile.png";
+
 function App() {
+  const [tab, setTab] = useState("home");
+
   return (
     <main
       style={{
@@ -11,6 +22,36 @@ function App() {
         boxSizing: "border-box",
       }}
     >
+      {/* NAV */}
+      <nav
+        style={{
+          display: "flex",
+          gap: "30px",
+          marginBottom: "60px",
+          fontSize: "18px",
+        }}
+      >
+        <span style={tabStyle(tab === "home")} onClick={() => setTab("home")}>
+          Home
+        </span>
+
+        <span
+          style={tabStyle(tab === "projects")}
+          onClick={() => setTab("projects")}
+        >
+          Projects
+        </span>
+      </nav>
+
+      {tab === "home" && <Home />}
+      {tab === "projects" && <Projects />}
+    </main>
+  );
+}
+
+function Home() {
+  return (
+    <>
       {/* HERO */}
       <section
         style={{
@@ -30,13 +71,13 @@ function App() {
               letterSpacing: "-3px",
             }}
           >
-            Jack
+            Jack Edwin
             <br />
             Ledesma
           </h1>
 
           <p style={{ fontSize: "24px", marginTop: "20px" }}>
-            Full Stack & Mobile Developer building clean web and mobile systems.
+            Full Stack & Mobile Developer
           </p>
         </div>
 
@@ -50,64 +91,6 @@ function App() {
         </div>
       </section>
 
-      {/* PROJECTS */}
-      <section style={{ marginBottom: "90px" }}>
-        <h2 style={{ fontSize: "34px", marginBottom: "30px" }}>Projects</h2>
-
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(350px, 1fr))",
-            gap: "25px",
-          }}
-        >
-          <div style={card}>
-            <h3>Automated Task Delegation & Management System (Capstone)</h3>
-            <p>
-              Developed an AI-powered task management system with automated task
-              allocation based on workload, task difficulty, and user skills.
-              Implemented skill-based profiling and fairness algorithms to improve
-              distribution efficiency.
-            </p>
-          </div>
-
-          <div style={card}>
-            <h3>Mobile App with GPS Tracking</h3>
-            <p>
-              Built and published a mobile application featuring OTP login,
-              commission tracking, wallet monitoring, and activity modules.
-              Implemented background GPS tracking with movement-based logging and
-              real-time API synchronization.
-            </p>
-          </div>
-
-          <div style={card}>
-            <h3>Agent Commission Collection & Wallet Management System</h3>
-            <p>
-              Developed a commission collection and reconciliation system with QR
-              payment integration and accounting workflows. Implemented automated
-              wallet crediting, transaction history, and web-mobile synchronization.
-            </p>
-          </div>
-
-          <div style={card}>
-            <h3>Automated Payroll System</h3>
-            <p>
-              Created a web-based payroll system automating commission calculations,
-              deductions, and payout tracking with accounting comments.
-            </p>
-          </div>
-
-          <div style={card}>
-            <h3>Stock Broker System</h3>
-            <p>
-              Developed Blazor-based stock trading pages with board lot validation
-              and transaction form handling.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* EXPERIENCE */}
       <section style={{ marginBottom: "80px" }}>
         <h2 style={{ fontSize: "34px" }}>Experience</h2>
@@ -117,71 +100,178 @@ function App() {
           <br />
           July 2025 – February 2026
         </p>
+
         <p>
           Developed and maintained web and mobile applications using .NET MAUI,
-          Blazor, MySQL, MongoDB, and API integrations. Implemented automation
-          features including commission tracking, wallet management, and payroll
-          workflows. Built real-time data synchronization and background services.
-        </p>
-
-        <br />
-
-        <p>
-          <strong>OJT / Internship — Full Stack Developer</strong>
-          <br />
-          February 2025 – April 2025
-        </p>
-        <p>
-          Assisted in developing web features using Blazor and .NET technologies.
-          Supported API integration and database-related tasks involving MySQL
-          and MongoDB.
+          Blazor, MySQL, MongoDB, and API integrations.
         </p>
       </section>
 
       {/* TECH STACK */}
       <section style={{ marginBottom: "80px" }}>
         <h2 style={{ fontSize: "34px" }}>Tech Stack</h2>
-        <p>
-          Java • JavaScript • Python • C++ • C# • HTML • Tailwind CSS
-        </p>
-        <p>
-          React • Blazor • Bootstrap • .NET MAUI • Node.js / Express
-        </p>
-        <p>
-          MySQL • MongoDB • Dapper • Supabase
-        </p>
-        <p>
-          Git • GitHub • Azure DevOps • Postman • Insomnia
-        </p>
-        <p>
-          JWT Authentication • OTP Login • CRUD APIs • Token Validation
-        </p>
-      </section>
-
-      {/* EDUCATION */}
-      <section style={{ marginBottom: "80px" }}>
-        <h2 style={{ fontSize: "34px" }}>Education</h2>
-        <p>
-          BS Computer Science — Centro Escolar University (2025)
-        </p>
-        <p>
-          Accountancy and Business Management — Centro Escolar University (2021)
-        </p>
+        <p>React • Blazor • .NET MAUI • Node.js</p>
+        <p>MySQL • MongoDB • Supabase</p>
+        <p>JWT Auth • APIs • Automation Systems</p>
       </section>
 
       {/* CONTACT */}
       <section>
         <h2 style={{ fontSize: "30px" }}>Contact</h2>
         <p>ledesmajack3@gmail.com</p>
+        <p>09453055039</p>
+        <p>https://www.linkedin.com/in/jack-edwin-ledesma-14373636b/</p>
       </section>
-    </main>
+    </>
   );
 }
+
+function Projects() {
+  return (
+    <section>
+      <h2 style={{ fontSize: "42px", marginBottom: "50px" }}>Projects</h2>
+
+      {/* THESIS */}
+      <div style={{ ...card, marginBottom: "70px" }}>
+        <h3 style={{ fontSize: "26px" }}>
+          Automated Task Delegation & Management System (Thesis)
+        </h3>
+
+        <iframe
+          width="100%"
+          height="420"
+          src="https://www.youtube.com/embed/5UYelvZtlI8"
+          title="Thesis Project Demo"
+          frameBorder="0"
+          allowFullScreen
+          style={{ borderRadius: "8px", marginTop: "15px" }}
+        ></iframe>
+
+        <p style={{ marginTop: "20px", lineHeight: "1.7" }}>
+          Designed and developed an AI-assisted task delegation system that
+          automatically distributes tasks based on workload, team member
+          skillsets, and task difficulty. The system helps project managers
+          reduce manual planning while improving team productivity and task
+          balance.
+        </p>
+      </div>
+
+      {/* WEB / ADMIN SYSTEM */}
+      <h3 style={{ fontSize: "28px", marginBottom: "25px" }}>
+        Web / Admin System
+      </h3>
+
+      <div style={projectGrid}>
+        <div style={cardLarge}>
+          <img src={fundreview} style={imgLarge} alt="Fund Review System" />
+          <p>
+            Developed the **fund review dashboard** used by administrators to
+            validate and review collected payments from field agents. This
+            interface ensures that reported collections match the system
+            records before approval.
+          </p>
+        </div>
+
+        <div style={cardLarge}>
+          <img src={payout} style={imgLarge} alt="Payout System" />
+          <p>
+            Built the **commission payout interface** allowing administrators to
+            process and release earnings to agents. Implemented payout tracking
+            and validation to prevent incorrect payments.
+          </p>
+        </div>
+
+        <div style={cardLarge}>
+          <img src={recon} style={imgLarge} alt="Reconciliation System" />
+          <p>
+            Created a **transaction reconciliation dashboard** that compares
+            multiple financial records to detect inconsistencies and missing
+            entries, improving financial accuracy and transparency.
+          </p>
+        </div>
+
+        <div style={cardLarge}>
+          <img src={wallet} style={imgLarge} alt="Wallet System" />
+          <p>
+            Implemented the **wallet management page** where administrators can
+            monitor agent balances, transaction history, and payment activity
+            across the system.
+          </p>
+        </div>
+      </div>
+
+      {/* MOBILE SYSTEM */}
+      <h3 style={{ fontSize: "28px", marginTop: "70px", marginBottom: "25px" }}>
+        Mobile Application
+      </h3>
+
+      <div style={projectGrid}>
+        <div style={cardLarge}>
+          <img src={conslemobile} style={imgLarge} alt="Mobile Console" />
+          <p>
+            Developed the **mobile console for field agents** to collect
+            payments, monitor commission earnings, and submit transaction
+            records directly from their mobile devices.
+          </p>
+        </div>
+
+        <div style={cardLarge}>
+          <img src={walletmobile} style={imgLarge} alt="Mobile Wallet" />
+          <p>
+            Built the **mobile wallet interface** where agents can track their
+            earnings, view payout history, and monitor real-time commission
+            balances.
+          </p>
+        </div>
+
+        <div style={cardLarge}>
+          <img src={accountmobile} style={imgLarge} alt="Mobile Account" />
+          <p>
+            Created the **account management screen** allowing agents to manage
+            their personal information, security settings, and profile details
+            directly within the mobile application.
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const imgStyle = {
+  width: "100%",
+  borderRadius: "6px",
+  marginBottom: "10px",
+};
+
+const tabStyle = (active) => ({
+  cursor: "pointer",
+  fontWeight: active ? "bold" : "normal",
+  borderBottom: active ? "2px solid black" : "none",
+  paddingBottom: "5px",
+});
 
 const card = {
   border: "1px solid #eee",
   padding: "25px",
   borderRadius: "8px",
+};
+
+const projectGrid = {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(420px,1fr))",
+  gap: "35px",
+};
+
+const imgLarge = {
+  width: "100%",
+  borderRadius: "8px",
+  marginBottom: "15px",
+};
+
+const cardLarge = {
+  border: "1px solid #eee",
+  padding: "25px",
+  borderRadius: "10px",
 };
 
 export default App;
