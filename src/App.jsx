@@ -103,7 +103,7 @@ function Home() {
         </p>
 
         <p>
-          Frameworks & Development: Blazor, React, Bootstrap, .NET MAUI
+          Frameworks & Development: Blazor, React, Bootstrap, .NET MAUI .NET
         </p>
 
         <p>
