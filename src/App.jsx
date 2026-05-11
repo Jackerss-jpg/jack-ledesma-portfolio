@@ -193,17 +193,17 @@ integration and database tasks involving MySQL and MongoDB.
 <form action="https://formsubmit.co/ledesmajack3@gmail.com" method="POST">
 
 <div className="mb-3">
-<label className="form-label">Name</label>
+<label className="form-label text-white">Name</label>
 <input type="text" className="form-control" name="name" required/>
 </div>
 
 <div className="mb-3">
-<label className="form-label">Email</label>
+<label className="form-label text-white">Email</label>
 <input type="email" className="form-control" name="email" required/>
 </div>
 
 <div className="mb-3">
-<label className="form-label">Message</label>
+<label className="form-label text-white">Message</label>
 <textarea className="form-control" rows="4" name="message" required/>
 </div>
 
